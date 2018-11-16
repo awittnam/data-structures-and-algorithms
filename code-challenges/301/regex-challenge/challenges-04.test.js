@@ -14,6 +14,7 @@ For example:
 
 const isNum = (input) => {
   // Solution code here...
+  return input.toString().match(/\d/g);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -26,6 +27,7 @@ Return an array containing all the matches.
 
 const isCapitalized = (str) => {
   // Solution code here...
+  return str.match(/[A-Z]\w+/g);  //need to add regex that adds the rest of the capitalized word
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -36,6 +38,9 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 
 const citiesAtoJ = (arr) => {
   // Solution code here...
+  return arr.match(/[A-J]\w+/g);
+
+  //need to push matching cities to an array and then return that array
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -52,6 +57,8 @@ Do not use the vertical bar (pipe) in your pattern.
 
 const matchMonth = (input) => {
   // Solution code here...
+//convert the 4 inputs toUpperCase/toLowerCase and strictly those inputs
+
 };
 
 /* ------------------------------------------------------------------------------------------------
