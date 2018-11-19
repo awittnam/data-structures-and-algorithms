@@ -15,7 +15,10 @@ For example, if the input is 'Welcome', the output will be:
 
 const howMuchPencil = (str) => {
   let result = [];
-  // Solution code here...
+  // Solution code here... slice the result using a loop
+  for (let i = 0; i <= str.length ; i++) {
+      result.push(str.slice(i));
+  };
   return result;
 };
 
@@ -28,7 +31,9 @@ For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 ------------------------------------------------------------------------------------------------ */
 
 const wordsToCharList = (arr) => {
-  // Solution code here...
+  // Solution code here...      -just split the string
+  arr = arr.split('');
+  return arr;
 };
 
 
@@ -75,9 +80,14 @@ const gruffaloCrumble = {
 
 const listFoods = (recipe) => {
   let result = [];
-  // Solution code here...
+  // Solution code here...return the item w/o amount or unit
+  recipe.ingredients.forEach( (ingredient) => {
+
+      ingredient = ingredient.slice(ingredient.indexOf(' ') +1);
+      result.push(ingredient.slice(ingredient.indexOf(' ') +1));
+  });
   return result;
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -90,8 +100,13 @@ You may also use other string or array methods.
 const splitFoods = (recipe) => {
   let result = [];
   // Solution code here...
+  recipe.ingredients.forEach( (ingredient) => {
+      result.push(ingredient.split(' ')
+      .splice(2)
+      .join(' '));
+  });
   return result;
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -106,8 +121,11 @@ Return a new array containing just the verbs. For example, ['Mix until evenly di
 const stepActions = (recipe) => {
   let result = [];
   // Solution code here...
+  recipe.steps.forEach((step) => {
+      result.push(step.split(' ')[0]);
+  });
   return result;
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
