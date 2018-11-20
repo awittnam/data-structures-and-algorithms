@@ -13,6 +13,7 @@ const courseInfo = { name: 'Code 301', duration: { dayTrack: '4 weeks', eveningT
 
 const getCourseKeys = (obj) => {
   // Solution code here...
+    return Object.keys(obj); //something, somethings
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -69,6 +70,7 @@ let characters = [
 
 const totalCharacters = (arr) => {
   // Solution code here...
+  return Object.values(arr).length;
 }
 
 /*------------------------------------------------------------------------------------------------
@@ -79,7 +81,8 @@ Write a function named getHouses that returns a new array containing the names o
 
 const getHouses = (arr) => {
   let houses = [];
-  // Solution code here...
+  // Solution code here... //push houses to array first?
+  arr.forEach( (object) => houses.push(object['house']));
   return houses;
 }
 
@@ -96,7 +99,12 @@ hasChildrenValues(characters, 'Eddard') will return false
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenValues = (arr, character) => {
-  // Solution code here...
+  // Solution code here... //I think  I broke repl trying to do these. I "understand" them at a high level, but I obviously don't get them at a functional level.
+  return arr.forEach( (obj) => {
+      if (obj.name === character) {
+          return obj.children;
+      }
+  })
 }
 
 /* ------------------------------------------------------------------------------------------------
