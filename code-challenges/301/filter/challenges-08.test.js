@@ -10,6 +10,8 @@ For example, oddValues([1,2,3]) returns [1,3].
 
 const oddValues = (arr) => {
   // Solution code here...
+  let result = arr.filter( (value) => value%2 === 1);
+  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -25,6 +27,8 @@ For example, filterStringsWithVowels('gregor','hound','xyz') returns ['gregor', 
 
 const filterStringsWithVowels = (arr) => {
   // Solution code here...
+  const result = arr.filter( (value) => value.match(/[aeiou]/g));
+  return result;
 };
 
 
@@ -38,6 +42,10 @@ For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 
 const notInFirstArray = (forbiddenValues, arr) => {
   // Solution code here...
+  let result = arr.filter( (value) => forbiddenValues.indexOf(value) === -1);
+  return result;
+
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -81,6 +89,8 @@ const snorlaxData = {
 
 const getBaseStatGreaterThan = (arr, minBaseStat) => {
   // Solution code here...
+  let result = arr.filter( (value) => value.baseStat > minBaseStat);
+  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
