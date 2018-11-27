@@ -10,7 +10,8 @@ Note: You may not use the array's built-in length property.
 
 const countNumberOfElements = (arr) => {
   // Solution code here...
-  
+  let nunOfEle = countNumberOfElements.reduce()
+  return countNumberOfElements;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -71,6 +72,7 @@ let starWarsData = [{
 
 const returnNames = (arr) => {
   // Solution code here...
+  name.reduce?
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -83,6 +85,7 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 
 const reversedString = (arr) => {
   // Solution code here...
+  need to break down each word into individual letters and then reversed the String.
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -148,6 +151,7 @@ Hint: The accumulator should begin as { count: 0, sum: 0 }
 
 const calculateAverage = (arr) => {
   // Solution code here...
+  iterate through each object and return counts of children from each family.
 };
 
 /* ------------------------------------------------------------------------------------------------
