@@ -24,6 +24,16 @@ const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
   // Solution code here...
+  let totalsArray = [];
+  for (let i = 0; i < stores[1].length; i++) {
+      let totalNum = 0;
+      
+      for (let j = 0; j < stores.length; j++) {
+      totalNum = totalNum + stores[j][i];
+    }
+    totalsArray.push(totalNum);
+  }
+  return totalsArray;
 
 }
 
@@ -39,6 +49,16 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 
 const salesData = (hours, data) => {
   // Solution code here...
+  let Arr = [];
+  let Obj = {};
+  hours.forEach( (val,idx) => {
+    Obj[idx].time = val;
+    Arr.push(Obj);
+  })
+  data.forEach( (val,idx) => {
+    Obj[idx].sales = val;
+  })
+  return Arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -61,6 +81,17 @@ const errands = [
 
 const howManyTreats = (arr) => {
   // Solution code here...
+  let answer = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].store === 'Pet store') {
+      arr[i].items.forEach( (val) => {
+        if (val.name === 'Treats') {
+          answer= answer + val.quantity;
+        }
+      })
+    }
+  }
+  return answer;
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -81,8 +112,19 @@ Here is a sample board:
 The top row of the board is considered row zero and row numbers increase as they go down.
 ------------------------------------------------------------------------------------------------ */
 
+//need to both row & col
+
 const battleship = (board, row, col) => {
   //  Solution code here...
+    for (let i = 0; i < board[0].length; i++) {
+      for (let j = 0; j < board.length; j++) {
+        if (board ([]/*row & col*/) === '#' ) {
+          return 'hit'
+        } else {
+          return 'miss'
+        }
+      }
+    }
 }
 
 /* ------------------------------------------------------------------------------------------------
