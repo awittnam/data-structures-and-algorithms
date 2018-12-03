@@ -10,6 +10,11 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['t', 
 
 const firstLetters = (arr) => {
   // Solution code here...
+  let resultsArr = [];
+  arr.forEach( (val) => {
+      resultsArr.push(val[0]);
+  })
+  return resultsArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -22,6 +27,13 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['this
 
 const findHappiness = (arr) => {
   // Solution code here...
+  let resultsArr2 = [];
+  arr.forEach( (val) => {
+      if (val.match(/(:\))/g)) {
+          resultsArr2.push(val);
+      }
+  })
+  return resultsArr2;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -34,6 +46,15 @@ For example, (123) 456-7890 returns 1234567890
 
 const standardizePhoneNumbers = (arr) => {
   // Solution code here...
+  let results3 = ' ';
+  for (let i = 0; i < arr.length; i++) {
+      for (let j = 0; j < arr[i].length; j++){
+        if (arr[j][i].match(/\d/g)) {
+            results3 = results3 = arr[j][i];
+        }    
+      }
+  }
+  return results3;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -46,6 +67,13 @@ For example, 'abcdefg' returns 'bdf'
 
 const onlyOddChars = (str) => {
   // Solution code here...
+  let results4 = ' ';
+  for (let i = 0; i < str.length; i++) {
+      if (i%2 === 1) {
+          results4 = results4 + str[i];
+      }
+  }
+  return results4;
 };
 
 /* ------------------------------------------------------------------------------------------------
