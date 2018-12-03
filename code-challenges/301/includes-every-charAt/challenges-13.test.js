@@ -84,6 +84,11 @@ Write a function named allHappy that takes in an array of strings and returns a 
 
 const allHappy = (arr) => {
   // Solution code here...
+  if (arr.length === (findSmile(arr).length)) {
+    return true;
+  } else {
+    return false;
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
